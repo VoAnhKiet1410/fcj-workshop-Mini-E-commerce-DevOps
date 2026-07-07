@@ -35,11 +35,11 @@ Hệ thống gồm các lớp chính sau:
     Phóng to
   </button>
   <div class="arch-viewer__stage" tabindex="0" aria-label="Kéo để xem sơ đồ kiến trúc">
-    <img class="arch-viewer__image" src="/images/5-Workshop/5.1-Workshop-overview/architecture.svg?v=20260707-4" alt="Kiến trúc tổng quan" draggable="false" />
+    <img class="arch-viewer__image" src="../../../images/5-Workshop/5.1-Workshop-overview/architecture.svg?v=20260707-4" alt="Kiến trúc tổng quan" draggable="false" />
   </div>
 </div>
 <p class="arch-viewer-help"><em>Nhấn nút ở góc trái để phóng to/thu nhỏ. Khi đang phóng to, kéo ngang hoặc dùng con lăn/touchpad để xem chi tiết.</em></p>
-<script src="/js/arch-viewer.js?v=20260707-3"></script>
+<script src="../../../js/arch-viewer.js?v=20260707-3"></script>
 
 #### Mô hình hai repository
 

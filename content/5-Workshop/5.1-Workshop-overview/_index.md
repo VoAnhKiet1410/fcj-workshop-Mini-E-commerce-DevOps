@@ -35,11 +35,11 @@ The system comprises the following main layers:
     Zoom In
   </button>
   <div class="arch-viewer__stage" tabindex="0" aria-label="Drag to inspect the architecture diagram">
-    <img class="arch-viewer__image" src="/images/5-Workshop/5.1-Workshop-overview/architecture.svg?v=20260707-4" alt="Overall architecture" draggable="false" />
+    <img class="arch-viewer__image" src="../../images/5-Workshop/5.1-Workshop-overview/architecture.svg?v=20260707-4" alt="Overall architecture" draggable="false" />
   </div>
 </div>
 <p class="arch-viewer-help"><em>Use the top-left button to zoom in/out. While zoomed in, drag horizontally or use the mouse wheel/trackpad to inspect details.</em></p>
-<script src="/js/arch-viewer.js?v=20260707-3"></script>
+<script src="../../js/arch-viewer.js?v=20260707-3"></script>
 
 #### Two-repository model
 
