@@ -104,6 +104,6 @@ kubectl version --client
 helm version
 ~~~
 
-![Tool version verification results](/images/5-Workshop/5.2-prerequisite/tools-versions.png)
+![Tool version verification results](/images/5-Workshop/5.2-Prerequisite/tools-versions.png)
 
 When all commands return successfully, the environment is ready to proceed with local execution and AWS deployment.

@@ -104,6 +104,6 @@ kubectl version --client
 helm version
 ~~~
 
-![Kết quả kiểm tra phiên bản công cụ](/images/5-Workshop/5.2-prerequisite/tools-versions.png)
+![Kết quả kiểm tra phiên bản công cụ](/images/5-Workshop/5.2-Prerequisite/tools-versions.png)
 
 Khi các lệnh trên trả về bình thường, môi trường đã đủ điều kiện để chuyển sang bước chạy local và triển khai AWS.
