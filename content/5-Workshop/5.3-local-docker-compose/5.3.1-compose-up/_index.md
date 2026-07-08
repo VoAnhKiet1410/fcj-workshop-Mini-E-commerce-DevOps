@@ -26,21 +26,7 @@ The <code>.env</code> file contains variables for Docker Compose, especially Pos
 docker compose up --build -d
 ~~~
 
-Expected output on success (screenshot shows 10 containers):
-
-~~~text
-[+] up 10/10
- ✔ Container mini-ecommerce-devops-paymentservice-1          Running
- ✔ Container mini-ecommerce-devops-currencyservice-1       Running
- ✔ Container mini-ecommerce-devops-shippingservice-1       Running
- ✔ Container mini-ecommerce-devops-productcatalogservice-1 Running
- ✔ Container mini-ecommerce-devops-redis-1                   Healthy
- ✔ Container mini-ecommerce-devops-emailservice-1            Running
- ✔ Container mini-ecommerce-devops-cartservice-1             Running
- ✔ Container mini-ecommerce-devops-postgres-1                  Running
- ✔ Container mini-ecommerce-devops-checkoutservice-1         Running
- ✔ Container mini-ecommerce-devops-frontend-1                Running
-~~~
+The expected result is <code>[+] up 10/10</code> with 10 containers in Running or Healthy state.
 
 The <code>--build</code> flag ensures images are built from the current source code. The <code>-d</code> flag runs containers in the background so you can continue checking status and logs.
 

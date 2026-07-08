@@ -26,21 +26,7 @@ File <code>.env</code> chứa các biến phục vụ Docker Compose, đặc bi�
 docker compose up --build -d
 ~~~
 
-Kết quả khi chạy thành công (ảnh minh chứng ghi nhận 10 container):
-
-~~~text
-[+] up 10/10
- ✔ Container mini-ecommerce-devops-paymentservice-1          Running
- ✔ Container mini-ecommerce-devops-currencyservice-1       Running
- ✔ Container mini-ecommerce-devops-shippingservice-1       Running
- ✔ Container mini-ecommerce-devops-productcatalogservice-1 Running
- ✔ Container mini-ecommerce-devops-redis-1                   Healthy
- ✔ Container mini-ecommerce-devops-emailservice-1            Running
- ✔ Container mini-ecommerce-devops-cartservice-1             Running
- ✔ Container mini-ecommerce-devops-postgres-1                  Running
- ✔ Container mini-ecommerce-devops-checkoutservice-1         Running
- ✔ Container mini-ecommerce-devops-frontend-1                Running
-~~~
+Kết quả mong đợi là <code>[+] up 10/10</code> với 10 container ở trạng thái Running hoặc Healthy.
 
 Tùy chọn <code>--build</code> bảo đảm image được build từ source code hiện tại. Tùy chọn <code>-d</code> chạy container ở chế độ nền để có thể tiếp tục kiểm tra trạng thái và log.
 
