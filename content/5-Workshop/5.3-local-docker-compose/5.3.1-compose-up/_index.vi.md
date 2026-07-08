@@ -26,9 +26,9 @@ File <code>.env</code> chứa các biến phục vụ Docker Compose, đặc bi�
 docker compose up --build -d
 ~~~
 
-Kết quả mong đợi là <code>[+] up 10/10</code> với 10 container ở trạng thái Running hoặc Healthy.
-
 Tùy chọn <code>--build</code> bảo đảm image được build từ source code hiện tại. Tùy chọn <code>-d</code> chạy container ở chế độ nền để có thể tiếp tục kiểm tra trạng thái và log.
+
+Kết quả mong đợi là <code>[+] up 10/10</code> với 10 container ở trạng thái Running hoặc Healthy.
 
 ![Kết quả docker compose up -d (chụp thực tế)](/images/5-Workshop/5.3-local-docker-compose/compose-up-live.png)
 

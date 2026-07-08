@@ -26,9 +26,9 @@ The <code>.env</code> file contains variables for Docker Compose, especially Pos
 docker compose up --build -d
 ~~~
 
-The expected result is <code>[+] up 10/10</code> with 10 containers in Running or Healthy state.
-
 The <code>--build</code> flag ensures images are built from the current source code. The <code>-d</code> flag runs containers in the background so you can continue checking status and logs.
+
+The expected result is <code>[+] up 10/10</code> with 10 containers in Running or Healthy state.
 
 ![docker compose up -d results (live capture)](/images/5-Workshop/5.3-local-docker-compose/compose-up-live.png)
 
