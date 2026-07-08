@@ -15,7 +15,3 @@ pre: " <b> 2.6.2 </b> "
 | **Mức 3 — Triển khai an toàn** | Argo Rollouts; canary/blue-green; policy enforcement | 0–20 USD thêm | Chi phí chủ yếu từ tài nguyên cluster |
 | **Mức 4 — Observability nâng cao** | Distributed tracing; dashboard SLO; synthetic check | 10–40 USD/tháng thêm | Phụ thuộc lượng trace/log gửi lên AWS |
 | **Mức 5 — Dữ liệu production-like** | RDS Multi-AZ; ElastiCache; backup/restore test | 50+ USD/tháng | Chỉ bật ngắn hạn khi cần minh chứng HA |
-
-#### Khuyến nghị cho báo cáo thực tập
-
-Với mục tiêu báo cáo, đề xuất triển khai **Mức 1 + Mức 2 + Mức 3** làm nền tảng chính (chi phí ước tính **10–50 USD/tháng**), và trình bày Mức 4–5 như định hướng mở rộng có kèm ước tính chi phí — thể hiện năng lực quản trị chi phí mà không cần duy trì hạ tầng đắt đỏ lâu dài.

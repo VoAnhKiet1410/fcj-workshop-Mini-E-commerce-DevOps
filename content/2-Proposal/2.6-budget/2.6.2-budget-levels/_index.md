@@ -15,7 +15,3 @@ To flex with internship budgets, proposals are divided into five expansion level
 | **Level 3 — Safe deployment** | Argo Rollouts; canary/blue-green; policy enforcement | +0–20 USD | Cost mainly from cluster resources |
 | **Level 4 — Advanced observability** | Distributed tracing; SLO dashboards; synthetic checks | +10–40 USD/month | Depends on trace/log volume sent to AWS |
 | **Level 5 — Production-like data** | RDS Multi-AZ; ElastiCache; backup/restore tests | +50 USD/month or more | Enable only briefly when HA evidence is needed |
-
-#### Recommendation for internship reporting
-
-For report goals, implementing **Level 1 + Level 2 + Level 3** as the main foundation (estimated cost **10–50 USD/month**) is recommended, with Levels 4–5 presented as expansion directions with cost estimates—demonstrating cost governance capability without maintaining expensive infrastructure long term.
