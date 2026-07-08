@@ -2,4 +2,13 @@
 {{- $localDestination := strings.TrimPrefix "/" $destination -}}
 {{- $isRemote := or (strings.HasPrefix $destination "http://") (strings.HasPrefix $destination "https://") -}}
 {{- $isData := strings.HasPrefix $destination "data:" -}}
-<img src="{{ if or $isRemote $isData }}{{ $destination | safeURL }}{{ else }}{{ $localDestination | relURL }}{{ end }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }}>
+{{- $src := $destination -}}
+{{- if not (or $isRemote $isData) -}}
+  {{- $src = $localDestination | relURL -}}
+  {{- if strings.Contains $src "?" -}}
+    {{- $src = printf "%s&v=%d" $src now.Unix -}}
+  {{- else -}}
+    {{- $src = printf "%s?v=%d" $src now.Unix -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }}>
