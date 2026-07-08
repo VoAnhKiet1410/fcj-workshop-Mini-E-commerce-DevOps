@@ -21,8 +21,6 @@ Trước khi thu hồi, workshop đã hoàn tất các nội dung:
 + Công bố frontend qua ALB.
 + Thiết lập quan sát bằng Prometheus, Grafana và CloudWatch.
 
-![Kết quả terraform destroy -auto-approve và xác minh cluster đã xóa (chụp thực tế)](/images/5-Workshop/5.6-Cleanup/terraform-destroy-live.png)
-
 #### Thu hồi hạ tầng AWS
 
 Trước khi destroy, kiểm tra đúng AWS account, region và thư mục môi trường. Các tài nguyên có thể bị xóa gồm EKS cluster, RDS instance, ALB, NAT Gateway và các tài nguyên liên quan.
@@ -30,16 +28,13 @@ Trước khi destroy, kiểm tra đúng AWS account, region và thư mục môi 
 ~~~powershell
 cd infra/environments/aws
 terraform destroy -auto-approve
-~~~
-
-Ảnh minh chứng ghi nhận thời gian destroy tiêu biểu: RDS ~5 phút, EKS cluster ~10 phút, VPC ~7 phút. Sau destroy, xác minh:
-
-~~~powershell
 aws eks list-clusters --region ap-southeast-1
 terraform state list
 ~~~
 
-Kết quả mong đợi: <code>clusters: []</code> và <code>(no resources – state empty)</code>.
+Kết quả mong đợi: <code>clusters: []</code> và <code>(no resources – state empty)</code>. Ảnh minh chứng ghi nhận thời gian destroy tiêu biểu: RDS ~5 phút, EKS cluster ~10 phút, VPC ~7 phút.
+
+![Kết quả terraform destroy -auto-approve và xác minh cluster đã xóa (chụp thực tế)](/images/5-Workshop/5.6-Cleanup/terraform-destroy-live.png)
 
 {{% notice warning %}}
 EKS, RDS, NAT Gateway và ALB đều có thể phát sinh chi phí. Sau khi demo xong, cần thu hồi tài nguyên để tránh chi phí kéo dài.
