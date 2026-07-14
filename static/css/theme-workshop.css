@@ -246,13 +246,37 @@ pre {
 #body-inner table th {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  text-align: center;
   vertical-align: middle;
 }
 
+/* Content tables (proposal index, events, etc.) */
+#body-inner table:not(:has(tr th:nth-child(5))) th {
+  text-align: left;
+}
+
+#body-inner table:not(:has(tr th:nth-child(5))) th:first-child,
+#body-inner table:not(:has(tr th:nth-child(5))) td:first-child {
+  width: auto;
+  min-width: 12rem;
+  max-width: 38%;
+  white-space: normal;
+  text-align: left;
+  vertical-align: top;
+}
+
+#body-inner table:not(:has(tr th:nth-child(5))) td a {
+  word-break: normal;
+  white-space: normal;
+}
+
+/* Worklog tables (5 columns) */
+#body-inner table:has(tr th:nth-child(5)) th {
+  text-align: center;
+}
+
 /* Thứ / Day — keep ranges like 4–5 or 7–CN on one line */
-#body-inner table th:first-child,
-#body-inner table td:first-child {
+#body-inner table:has(tr th:nth-child(5)) th:first-child,
+#body-inner table:has(tr th:nth-child(5)) td:first-child {
   min-width: 4.5rem;
   width: 4.5rem;
   white-space: nowrap;
@@ -264,10 +288,10 @@ pre {
 }
 
 /* Ngày bắt đầu / Ngày hoàn thành */
-#body-inner table th:nth-child(3),
-#body-inner table th:nth-child(4),
-#body-inner table td:nth-child(3),
-#body-inner table td:nth-child(4) {
+#body-inner table:has(tr th:nth-child(5)) th:nth-child(3),
+#body-inner table:has(tr th:nth-child(5)) th:nth-child(4),
+#body-inner table:has(tr th:nth-child(5)) td:nth-child(3),
+#body-inner table:has(tr th:nth-child(5)) td:nth-child(4) {
   min-width: 8rem;
   white-space: nowrap;
   text-align: center;
@@ -277,21 +301,21 @@ pre {
 }
 
 /* Công việc — main content column */
-#body-inner table th:nth-child(2),
-#body-inner table td:nth-child(2) {
+#body-inner table:has(tr th:nth-child(5)) th:nth-child(2),
+#body-inner table:has(tr th:nth-child(5)) td:nth-child(2) {
   min-width: 14rem;
 }
 
 /* Nguồn tài liệu — compact labeled links */
-#body-inner table th:nth-child(5),
-#body-inner table td:nth-child(5) {
+#body-inner table:has(tr th:nth-child(5)) th:nth-child(5),
+#body-inner table:has(tr th:nth-child(5)) td:nth-child(5) {
   min-width: 11rem;
   max-width: 13rem;
   vertical-align: middle;
   text-align: center;
 }
 
-#body-inner table td:nth-child(5) a {
+#body-inner table:has(tr th:nth-child(5)) td:nth-child(5) a {
   display: inline-block;
   margin: 0.2rem 0;
   padding: 0.15rem 0.25rem;
@@ -304,11 +328,11 @@ pre {
   border-bottom: 1px solid rgba(72, 129, 205, 0.35);
 }
 
-#body-inner table td:nth-child(5) a:hover {
+#body-inner table:has(tr th:nth-child(5)) td:nth-child(5) a:hover {
   border-bottom-color: var(--MAIN-LINK-HOVER-color);
 }
 
-#body-inner table td:nth-child(5) a + a {
+#body-inner table:has(tr th:nth-child(5)) td:nth-child(5) a + a {
   margin-top: 0.35rem;
 }
 
